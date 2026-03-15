@@ -118,7 +118,101 @@
         .nav-links a:hover {
             color: var(--white);
         }
-        
+        .nav-tag {
+            font-family: 'DM Mono',monospace;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--red);
+            border: 1px solid var (--red-dim);
+            padding: 4px 10px;
+            text-transform: uppercase;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex; flex-direction: column;
+            justify-content: flex-end;
+            padding: 0px 48px 72px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(232,0,45,0.07) 0%, transperent 70%), 
+            radial-gradient(ellipse 50% 80% at 20% 80%, rgba(232, 0, 45, 0.04) 0%, transparent 60%);
+        }
+        .track-bg {
+            position: absolute;
+            right: -80px;
+            top:50%;
+            transform: translateY(-50%);
+            width: 55vw;
+            opacity: 0.04;
+            animation: trackSpin 60s linear infinite;
+        }
+        @keyframes trackSpin {
+            from{
+                transform: translateY(-50%) rotate(0deg);
+            }
+            to {
+                transform: translateY(-50%) rotate(360deg);
+            }
+        }
+        .hero-eyebrow{
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: var(--red);
+            text-transform: uppercase;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.2s forwards;
+        }
+        .hero-title {
+            font-family: 'Bebas Neue', sans serif;
+            font-size: clamp(72px, 12vw, 160px);
+            line-height: 0.9;
+            letter-spacing: 2px;
+            margin-bottom: 28px;
+            opacity: 0;
+            animation: fadeup 0.8s 0.45s forwards;
+        }
+        .hero-title .accent {
+            color: var(--red);
+        }
+        .hero-title .stroke {
+            -webkit-text-stroke: 1px var(--white);
+            color: transparent;
+        }
+        .hero-sub {
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--off);
+            max-width: 480px;
+            line-height: 1.7;
+            margin-bottom: 48px;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.6s forwards;
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            animation: fadeUp 0.8s 0.8s forwards;
+        }
+        .btn-primary {
+            background: var(--red);
+            color: var(--white);
+            font-family: 'DM Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 15px 32px;
+            border: none;
+            cursor: none;
+            transition: background 0.2s, transform 0.15s;
+            text-decoration: none;
+            display: inline-block;
+        }
     </style>
 </head>
 
